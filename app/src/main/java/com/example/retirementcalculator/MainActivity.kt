@@ -3,6 +3,7 @@ package com.example.retirementcalculator
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var retirementEditText: EditText
     private lateinit var monthlySavingsEditText: EditText
     private lateinit var currentEditText: EditText
+    private lateinit var resultTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         retirementEditText = findViewById(R.id.retirementEditText)
         monthlySavingsEditText = findViewById(R.id.monthlySavingsEditText)
         currentEditText = findViewById(R.id.currentEditText)
+        resultTextView = findViewById(R.id.resultTextView)
 
         AppCenter.start(
             application, "fb555114-a0ee-4e85-89fe-74ccc8583f60",
@@ -56,6 +59,10 @@ class MainActivity : AppCompatActivity() {
                 if (retirementAge <= currentAge) {
                     Analytics.trackEvent("wrong_age")
                 }
+
+                resultTextView.text =
+                    "At the current rate of $interestRate%, saving \$$monthly a month you will have \$X by $retirementAge."
+
             } catch (ex: Exception) {
                 Analytics.trackEvent(ex.message)
             }
