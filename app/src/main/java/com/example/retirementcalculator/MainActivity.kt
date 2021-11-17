@@ -9,7 +9,7 @@ import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 
-//latest
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var calculateButton: Button
