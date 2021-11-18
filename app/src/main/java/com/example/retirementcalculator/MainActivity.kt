@@ -29,10 +29,8 @@ class MainActivity : AppCompatActivity() {
         monthlySavingsEditText = findViewById(R.id.monthlySavingsEditText)
         currentEditText = findViewById(R.id.currentEditText)
 
-        
-        //fb555114-a0ee-4e85-89fe-74ccc8583f60
         AppCenter.start(
-            application, "9d8c01d8-b818-408c-bb63-8ce105dc90e0",
+            application, "fb555114-a0ee-4e85-89fe-74ccc8583f60",
             Analytics::class.java, Crashes::class.java
         )
 
