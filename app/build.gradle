@@ -45,7 +45,8 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
-            signingConfig signingConfigs.debug
+            minifyEnabled false
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
