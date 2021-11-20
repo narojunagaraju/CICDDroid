@@ -10,12 +10,13 @@ android {
 
     defaultConfig {
         applicationId "com.example.retirementcalculator"
-        minSdk 24
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
 
@@ -29,10 +30,10 @@ android {
             v2SigningEnabled true
         }
         debug {
-            keyAlias 'RetirementCalculator'
-            keyPassword 'RetirementCalculator'
-            storePassword 'RetirementCalculator'
-            storeFile file('E:\\CICDAndroid\\RetirementCalculator\\RetirementCalculator.jks')
+            storeFile file('C:\\Users\\hp\\.android\\debug.keystore')
+            keyAlias 'androiddebugkey'
+            storePassword 'android'
+            keyPassword 'android'
             v1SigningEnabled true
             v2SigningEnabled true
         }
@@ -46,7 +47,7 @@ android {
         }
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
