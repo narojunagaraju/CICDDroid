@@ -29,10 +29,10 @@ android {
             v2SigningEnabled true
         }
         debug {
-            storeFile file('C:\\Users\\hp\\.android\\debug.keystore')
-            keyAlias 'androiddebugkey'
-            storePassword 'android'
-            keyPassword 'android'
+            keyAlias 'RetirementCalculator'
+            keyPassword 'RetirementCalculator'
+            storePassword 'RetirementCalculator'
+            storeFile file('E:\\CICDAndroid\\RetirementCalculator\\RetirementCalculator.jks')
             v1SigningEnabled true
             v2SigningEnabled true
         }
